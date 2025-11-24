@@ -1,4 +1,4 @@
-/* ===== RESET E BASE ===== */
+/* ===== RESET AND BASE ===== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -54,14 +54,14 @@ nav ul li a:focus {
     border-bottom: 2px solid #00cec9;
 }
 
-/* ===== SECÕES ===== */
+/* ===== SECTIONS ===== */
 section {
     padding: 100px 20px 60px;
     text-align: center;
     min-height: calc(100vh - 70px);
 }
 
-/* ===== SOBRE ===== */
+/* ===== ABOUT ===== */
 #sobre {
     background: #dfe6e9;
     padding: 120px 10%;
@@ -149,7 +149,7 @@ section {
     color: #fff;
 }
 
-/* ===== PROJETOS ===== */
+/* ===== PROJECTS ===== */
 #projetos {
     background: #b2bec3;
 }
@@ -159,6 +159,24 @@ section {
 }
 
 .projetos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* ===== SYSTEMS ===== */
+#sistemas {
+    background: #b2bec3;
+}
+
+#sistemas h2 {
+    margin-bottom: 20px;
+}
+
+.sistemas-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -189,7 +207,7 @@ section {
     margin-bottom: 15px;
 }
 
-/* ===== CONTATO ===== */
+/* ===== CONTACT ===== */
 #contato {
     background: #dfe6e9;
 }
@@ -214,13 +232,14 @@ footer {
     color: #fff;
 }
 
-/* ===== ANIMAÇÕES ===== */
+/* ===== ANIMATIONS ===== */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== RESPONSIVIDADE ===== */
+
+/* ===== RESPONSIVENESS ===== */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -241,5 +260,50 @@ footer {
 
     .sobre-texto {
         text-align: justify;
+    }
+}
+
+/* ===== 9. UX IMPROVEMENTS WITH JS ===== */
+
+/* Style for the active section link */
+nav ul li a.active {
+    color: #00cec9;
+    border-bottom: 2px solid #00cec9;
+}
+
+/* Back to Top Button */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #2d3436;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    transition: opacity 0.3s, visibility 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#scrollToTopBtn:hover {
+    background: #00cec9;
+}
+
+/* Adjusting the responsiveness of the button */
+@media (max-width: 768px) {
+    #scrollToTopBtn {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
     }
 }
