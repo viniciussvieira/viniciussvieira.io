@@ -129,6 +129,15 @@ section {
     background: #b2bec3;
 }
 
+/* espaçamento interno extra entre as duas sections */
+#projetos {
+    padding-bottom: 140px;
+}
+
+#sistemas {
+    padding-top: 140px;
+}
+
 .projetos-container, .sistemas-container {
     display: flex;
     justify-content: center;
@@ -212,3 +221,16 @@ footer {
     opacity: 0;
     visibility: hidden;
 }
+
+#projetos,
+#sistemas,
+#contato {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 140px;
+    flex-direction: column; 
+    text-align: center;
+}
+
